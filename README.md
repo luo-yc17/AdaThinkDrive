@@ -9,6 +9,7 @@ Technological University, <sup>5</sup> Peking University
 (\*) Equal contribution. (‡) Project leader. (✉) Corresponding author.
 
 <a href="https://arxiv.org/abs/2509.13769"><img src='https://img.shields.io/badge/arXiv-AdaThinkDrive-red' alt='Paper PDF'></a>
+<a href="https://huggingface.co/datasets/zhxxxxxx/AdaThinDrive"><img src="https://img.shields.io/badge/%F0%9F%A4%97%20Datasets-AdaThinkDrive-red" alt="Hugging Face Datasets"></a>
 </div>
 
 ## Abstract
@@ -29,7 +30,18 @@ While reasoning technology like Chain-of-Thought (CoT) has been widely adopted i
 - [ ] AdaThinkDrive Inference Code
 - [ ] AdaThinkDrive Checkpoint
 - [ ] AdaThinkDrive Training Code
-- [ ] Training Dataset
+- [x] [Training Dataset](https://huggingface.co/datasets/zhxxxxxx/AdaThinDrive)
+
+## Training Dataset
+
+The NAVSIM training annotations are available on [Hugging Face](https://huggingface.co/datasets/zhxxxxxx/AdaThinDrive).
+
+| Dataset | Samples | Description | Download |
+| :--- | ---: | :--- | :---: |
+| NAVSIM-CoT | 85,109 | Planning reasoning in `<think>` tags and the future trajectory in `<answer>` tags. | [JSON](https://huggingface.co/datasets/zhxxxxxx/AdaThinDrive/resolve/main/navsim_cot.json?download=true) |
+| NAVSIM-NoCoT | 85,109 | Empty `<think></think>` tags with the original future trajectory preserved in `<answer>` tags. | [JSON](https://huggingface.co/datasets/zhxxxxxx/AdaThinDrive/resolve/main/navsim_nocot.json?download=true) |
+
+Both files contain the same cases and use the same relative image paths. Download the NAVSIM sensor data separately following the [official instructions](https://github.com/autonomousvision/navsim/blob/main/docs/install.md), and configure the image paths for your local dataset layout.
 
 ## Acknowledgements
 
